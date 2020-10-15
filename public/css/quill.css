@@ -24,16 +24,17 @@ body {
 }
 
 
-#endpoint {
+/* Add styling for homepage endpoint stuff */
+.endpoint {
     padding-left: .5em;
 }
-#endpoint .btn {
+.endpoint .btn {
     font-size: 1.8em;
     background-color: #212121;
     color: white;
 
 }
-#endpoint endpoint {
+.endpoint endpoint {
     padding-left: .2em;
     padding-right: .2em;
 }

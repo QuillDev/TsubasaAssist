@@ -5,6 +5,9 @@ const HTMLParser = require('node-html-parser');
 
 const imageUtils = require('../General/image-utils');
 
+
+//TODO Look at potentially scraping the web data myself...?
+
 /**
  * Get data to post as json for scheduled shows
  * @returns {Promise<JSON>}

@@ -32,6 +32,12 @@ app.get('/api/anime/seasonal', (req, res) =>{
         .catch(err => console.error(`Error when running anime schedule module \n${err}`));
 });
 
+app.get('/api/anime/searchShow', (req, res) =>{
+    anime.getAnimeData(req.query.q)
+        .then(response => res.json(response))
+        .catch(err => console.error(`Error when running anime schedule module \n${err}`));
+});
+
 
 //Start app listening
 let port = process.env.PORT || 3000;
