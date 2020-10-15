@@ -88,6 +88,7 @@ async function getShowNames() {
     }
     return names;
 }
+
 /**
  * Gets the three most popular shows airing today and the names of all of the shows airing today
  * @returns {Promise<null|*[]>}

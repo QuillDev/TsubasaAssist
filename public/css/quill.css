@@ -1,0 +1,39 @@
+body {
+    font-family: "Segoe UI";
+    background-color: #36393f;
+    color: white;
+    margin: 0;
+}
+
+/*
+    Add syling for logo and information on the page
+ */
+#logo {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#logo logo {
+    font-size: 4em;
+}
+
+/* Section header for different endpoints*/
+#sectionHeader {
+    font-size: 3em;
+    padding-left: .2em;
+}
+
+
+#endpoint {
+    padding-left: .5em;
+}
+#endpoint .btn {
+    font-size: 1.8em;
+    background-color: #212121;
+    color: white;
+
+}
+#endpoint endpoint {
+    padding-left: .2em;
+    padding-right: .2em;
+}

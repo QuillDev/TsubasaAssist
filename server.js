@@ -1,13 +1,22 @@
 //Get express and path for serving Pages etc.
 const express = require('express');
-const app = express();
+const morgan = require('morgan');
 const path = require('path');
 
 //config dotenv
 require('dotenv').config();
 
+//Setup express app
+const app = express();
+
+//setup logging using morgan
+app.use(morgan(`tiny`));
+
 //Anime module
 const anime = require('./Modules/Anime/anime');
+
+//use the public dir for css etc.
+app.use(express.static(__dirname + '/public'));
 
 //Get the default route
 app.get('/', function(req, res) {
