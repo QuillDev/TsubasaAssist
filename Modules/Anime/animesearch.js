@@ -5,11 +5,12 @@ const got = require('got');
  * @param query the query to get data for
  * @returns {Promise<*>} Data about the show as JSON
  */
-async function getAnimeData(query){
+async function getAnimeData(query, type = "anime"){
 
+    //create a promise to resolve for our requests
     return new Promise( (async (resolve) => {
         try {
-            let animeData = await got.get(`https://api.jikan.moe/v3/search/anime?q=${query}&page=1`)
+            let animeData = await got.get(`https://api.jikan.moe/v3/search/${type}?q=${query}&page=1`)
                 .then(res => JSON.parse(res.body))
                 .catch(error => console.error(`Problem processing search request for query ${query}\n${error}`));
 

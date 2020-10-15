@@ -32,10 +32,18 @@ app.get('/api/anime/seasonal', (req, res) =>{
         .catch(err => console.error(`Error when running anime schedule module \n${err}`));
 });
 
+//Search anime show
 app.get('/api/anime/searchShow', (req, res) =>{
-    anime.getAnimeData(req.query.q)
+    anime.getAnimeData(req.query.q, "anime")
         .then(response => res.json(response))
-        .catch(err => console.error(`Error when running anime schedule module \n${err}`));
+        .catch(err => console.error(`Error when running searchShow module \n${err}`));
+});
+
+//Search anime character
+app.get('/api/anime/searchCharacter', (req, res) =>{
+    anime.getAnimeData(req.query.q, "character")
+        .then(response => res.json(response))
+        .catch(err => console.error(`Error when running anime searchCharacter module \n${err}`));
 });
 
 
